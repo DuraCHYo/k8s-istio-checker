@@ -1,0 +1,12 @@
+apiVersion: checker.depishev/v1
+kind: Checker
+metadata:
+  labels:
+    app.kubernetes.io/name: checker-istio
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: checker-istio
+  name: checker-istio
+spec:
+  destinationNamespaces: ["production", "development"] # подумать как передавать переменную. ENV?
+  sourceNamespaces: ["production", "development"] # подумать как передавать переменную. ENV?
+  externalIPtoCheck: ["production", "development"] # подумать как передавать переменную. ENV?
